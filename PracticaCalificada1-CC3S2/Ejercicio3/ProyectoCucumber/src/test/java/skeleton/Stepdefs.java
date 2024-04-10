@@ -41,7 +41,7 @@ public class Stepdefs {
 	// Regular expression matcher for positive integers
 	// Should match the string: test_posint followed by an sequence of
 	// digits of arbitrary length
-    @When("^test_posint (\\d+)")
+    @When("^test_posint (\\d+)$")
     public void test_posint(int number) throws Throwable {
         System.out.println("test_posint true for: " + number);
     }
