@@ -62,8 +62,8 @@ public class Stepdefs {
     // minus sign followed by a sequence of 
 	// digits of arbitrary length followed by a period followed by
     // a second sequence of digits of arbitrary length.
-    @When("^test_float -*(\\d+).$")
-    public void test_float(float arg1) throws Throwable {
+    @When("^test_float -*(\\d+).(\\d+)$")
+    public void test_float(float arg1, float arg2) throws Throwable {
         System.out.println("test_int true for: " + arg1);
     }
     
@@ -75,7 +75,7 @@ public class Stepdefs {
     //    A one followed by a zero, one, or two followed by any digit
     
     // SEE NOTE 3 :)
-    @When("^test_ip_address FILL IN REGULAR EXPRESSION HERE$")
+    @When("^test_ip_address ((\\d)(.|d+))$")
     public void test_ip_address(String arg1) throws Throwable {
         System.out.println("test_ip_address true for: " + arg1);
     }
