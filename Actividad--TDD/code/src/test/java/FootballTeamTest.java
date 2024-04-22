@@ -1,13 +1,15 @@
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
 public class FootballTeamTest {
-    private static final int GAMES_WON = 5;
-    @Test
-    void constructorShouldSetGamesWon() {
-        FootballTeam team = new FootballTeam(GAMES_WON);
+    @ParameterizedTest
+    @ValueSource(ints = { 0, 1, 3, 10 })
+    void constructorShouldSetGamesWon(int nbOfGamesWon) {
+        FootballTeam team = new FootballTeam(nbOfGamesWon);
         assertThat(team.getGamesWon())
                 .as("number of games won")
-                .isEqualTo(GAMES_WON);
+                .isEqualTo(nbOfGamesWon);
     }
 }
-
