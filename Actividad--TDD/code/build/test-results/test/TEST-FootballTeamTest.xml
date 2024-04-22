@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FootballTeamTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-21T21:50:07" hostname="DESKTOP-95F1O9I" time="0.056">
+<testsuite name="FootballTeamTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-22T02:09:55" hostname="DESKTOP-95F1O9I" time="0.034">
   <properties/>
-  <testcase name="constructorShouldSetGamesWon()" classname="FootballTeamTest" time="0.056"/>
+  <testcase name="constructorShouldSetGamesWon()" classname="FootballTeamTest" time="0.034"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

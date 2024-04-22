@@ -42,4 +42,16 @@ Una vez pasada la prueba, refactorizamos el codigo por mas insignificante que se
 
 ---
 
-Si bien completamos el proceso RGR, el codigo es aun mejorable dado que el valor que esta retornando es estatico (en este caso el 3) podemos usar this. para poder usar diferentes valores (no solo el 3)
+Si bien completamos el proceso RGR, el codigo es aun mejorable dado que el valor que esta retornando es estatico (en este caso el 3) podemos usar this. para poder usar diferentes valores (no solo el 3). Por ende volvemos a realizar el proceso RGR
+
+Al correr la prueba se observa que esta falla como se esperaba debido a que siempre retorna 3
+
+![](images/7.png)
+
+Una vez fallada la prueba empezamos a codear para hacerla pasar
+
+![](images/8.png)
+
+Aca modificamos el constructor para establecer un valor de juegos ganados y asi evitar que sea estatico, una vez hecho esto la prueba pasa correctamente
+
+![](images/9.png)
