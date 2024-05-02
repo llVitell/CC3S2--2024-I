@@ -39,4 +39,4 @@ Por último ejecutamos todas las pruebas ya sea con el comando `gradle test` o u
 
 ![](images/terminal.png)
 
-Se observa que los 7 tests que codeamos pasaron correctamente las pruebas
+Se observa que los 7 tests que codeamos pasaron correctamente las pruebas.
