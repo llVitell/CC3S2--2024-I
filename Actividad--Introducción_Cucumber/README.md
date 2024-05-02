@@ -37,7 +37,7 @@ Entonces debemos escribir los escensarios para los casos 1, 2, 3 y 4
 
 ![](images/img6.png)
 
-Por último ejecutamos los escenearios y observamos que todos pasan satisfactoriamente
+Por último ejecutamos los escenearios y observamos que todos pasan satisfactoriamente.
 
 ![](images/img7.png)
 
