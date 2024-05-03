@@ -1,4 +1,4 @@
-# Actividad Ejemplo de TDD
+# Actividad Ejemplo de TDD-RGR
 
 Para poder comparar dos equipos, cada uno de ellos debe recordar su número de victorias. Por
 simplicidad, diseñemos una clase FootballTeam que tome el número de juegos como parámetro del
