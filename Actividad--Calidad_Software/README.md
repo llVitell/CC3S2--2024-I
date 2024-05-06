@@ -6,7 +6,7 @@ En esta actividad se seleccionará un sitio web preferido y se identificará tre
 
 https://www.academico.uni.edu.pe/alumno/inicio
 
-![](image.png)
+![](images/image.png)
 
 ## Atributos de calidad
 
