@@ -51,6 +51,7 @@ dependencies {
 
     // Using JUnit 5 (latest), note the changes in dependency classification
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 
     // Cucumber dependencies updated and using the latest version with JUnit 5 support
     testImplementation 'io.cucumber:cucumber-java:6.10.4'

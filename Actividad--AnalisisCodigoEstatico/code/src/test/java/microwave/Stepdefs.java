@@ -1,4 +1,5 @@
 package microwave;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +11,6 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
 import io.cucumber.java.en.Then;
 
 public class Stepdefs {
@@ -26,7 +26,7 @@ public class Stepdefs {
 	}
 	public void printDigits(byte [] digits) {
     	System.out.println("Digits is: " + 
-    			digits[DisplayController.TENS_OF_MINUTES] + " " + 
+    			digits[DisplayController.TENS_OF_MINUTES] + " " +
     			digits[DisplayController.MINUTES] + " " + 
     			digits[DisplayController.TENS_OF_SECONDS] + " " + 
     			digits[DisplayController.SECONDS]);
@@ -37,26 +37,19 @@ public class Stepdefs {
 		System.out.println("Mode is: " + microwave.getMode()); 
 	}
 
-/*	
 	@Given("^presets are$")
-    public void presets_are(DataTable arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-        // E,K,V must be a scalar (String, Integer, Date, enum etc)
-    	List<Preset> presets; 
-    	presets = arg1.asList(Preset.class);    	
+    public void presets_are(DataTable dataTable){
+    	List<Preset> presets = dataTable.asList(Preset.class);
 		microwave = new Microwave(new ModeController(), new DisplayController(100), presets);
     	microwave.setDoorOpen(false);
-		presets.stream().forEach(p -> System.out.println(p));
     }
-*/
-	@Given("^presets are$")
+
+	/*@Given("^presets are$")
     public void presets_are(List<Preset> presets) throws Throwable {
 		microwave = new Microwave(new ModeController(), new DisplayController(100), presets);
     	microwave.setDoorOpen(false);
 		presets.stream().forEach(p -> System.out.println(p));
-    }
+    }*/
 	
 	@Given("^foobars are$")
     // public void presets_are(List<List<String>> arg) throws Throwable {
@@ -83,6 +76,37 @@ public class Stepdefs {
         microwave.tick();
         // printStatus();
 	}
+	@When("^([A-Za-z]+) presses the start key$")
+	public void user_presses_the_start_key(String user) throws Throwable {
+		// System.out.println(user + " presses the start key.");
+		microwave.startPressed();
+		microwave.tick();
+		// printStatus();
+	}
+	@When("^(\\d+) seconds elapse$")
+	public void seconds_elapse(int time) throws Throwable {
+		// System.out.println("" + time + " seconds elapse.");
+		for (int i = 0; i < (time*1000) / microwave.getTickRateInHz(); i++) {
+			microwave.tick();
+		}
+		// printStatus();
+	}
+
+	@Then("^digits reads (\\d)(\\d)(\\d)(\\d)$")
+	public void digits_reads(int tensOfMinutes, int minutes, int tensOfSeconds, int seconds) throws Throwable {
+		// System.out.println("Digits expects: " + tensOfMinutes + " " + minutes + " " + tensOfSeconds + " " + seconds);
+		byte [] digits = microwave.digits();
+		// printDigits(digits);
+		assertEquals((int)digits[DisplayController.TENS_OF_MINUTES], tensOfMinutes);
+		assertEquals((int)digits[DisplayController.MINUTES], minutes);
+		assertEquals((int)digits[DisplayController.TENS_OF_SECONDS], tensOfSeconds);
+		assertEquals((int)digits[DisplayController.SECONDS], seconds);
+	}
+	@Then("^mode is cooking$")
+	public void mode_is_cooking() throws Throwable {
+		// System.out.println("Mode is cooking");
+		assertEquals(microwave.getMode(), ModeController.Mode.Cooking);
+	}
 
 	@Given("^([A-Za-z]+) presses the following keys: (.*)$")
 	public void user_presses_keys(String user, String keysString) {
@@ -105,40 +129,6 @@ public class Stepdefs {
 			microwave.tick();
 		}
 	}
-	
-    @When("^([A-Za-z]+) presses the start key$")
-    public void user_presses_the_start_key(String user) throws Throwable {
-        // System.out.println(user + " presses the start key.");
-        microwave.startPressed();
-        microwave.tick();
-        // printStatus();
-    }
-
-    @When("^(\\d+) seconds elapse$")
-    public void seconds_elapse(int time) throws Throwable {
-        // System.out.println("" + time + " seconds elapse.");
-        for (int i = 0; i < (time*1000) / microwave.getTickRateInHz(); i++) {
-        	microwave.tick(); 
-        }
-        // printStatus();
-    }
-
-    @Then("^digits reads (\\d)(\\d)(\\d)(\\d)$")
-    public void digits_reads(int tensOfMinutes, int minutes, int tensOfSeconds, int seconds) throws Throwable {
-    	// System.out.println("Digits expects: " + tensOfMinutes + " " + minutes + " " + tensOfSeconds + " " + seconds);
-    	byte [] digits = microwave.digits();
-    	// printDigits(digits);
-    	assertEquals((int)digits[DisplayController.TENS_OF_MINUTES], tensOfMinutes);
-    	assertEquals((int)digits[DisplayController.MINUTES], minutes);
-    	assertEquals((int)digits[DisplayController.TENS_OF_SECONDS], tensOfSeconds);
-    	assertEquals((int)digits[DisplayController.SECONDS], seconds); 
-    }
-
-    @Then("^mode is cooking$")
-    public void mode_is_cooking() throws Throwable {
-    	// System.out.println("Mode is cooking");
-    	assertEquals(microwave.getMode(), ModeController.Mode.Cooking);
-    }
 
     @Then("^mode is setup$")
     public void mode_is_setup() throws Throwable {

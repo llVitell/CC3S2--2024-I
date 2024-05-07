@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RunCukesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-05-07T17:32:47" hostname="DESKTOP-95F1O9I" time="0.074">
+  <properties/>
+  <testcase name="eaten many cukes and growl" classname="RunCukesTest" time="0.052"/>
+  <testcase name="eaten many cukes and not growl #1" classname="RunCukesTest" time="0.002"/>
+  <testcase name="eaten many cukes and not growl #2" classname="RunCukesTest" time="0.009"/>
+  <testcase name="eaten many cukes and not growl #3" classname="RunCukesTest" time="0.003"/>
+  <testcase name="eaten many cukes and not growl #4" classname="RunCukesTest" time="0.001"/>
+  <testcase name="eaten many cukes and not growl #5" classname="RunCukesTest" time="0.002"/>
+  <system-out><![CDATA[I'm eating 27 cukes!
+I ate 27 cucumbers.
+I'm eating 27 cukes!
+I ate 27 cucumbers.
+I'm eating 10 cukes!
+I ate 10 cucumbers.
+I'm eating 8 cukes!
+I ate 8 cucumbers.
+I'm eating 10 cukes!
+I ate 10 cucumbers.
+I'm eating 7 cukes!
+I ate 7 cucumbers.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
