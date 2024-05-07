@@ -74,7 +74,6 @@ pitest {
 
 sonar {
     properties {
-        property "sonar.projectKey", "test-software_sonarcloud-cc3s2"
         property "sonar.organization", "test-software"
         property "sonar.token", "1fe4375501fcf8b332db064f028126fbf211ff0d"
         property "sonar.host.url", "https://sonarcloud.io"
