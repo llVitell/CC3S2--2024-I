@@ -1,4 +1,4 @@
-# Actividad Introducción a Cucumber
+# Actividad Introduccion a Cucumber
 
 En esta actividad tenemos un código que simula un estomago el cual come pepinos y espera un tiempo necesario (no come pepinos)
 
