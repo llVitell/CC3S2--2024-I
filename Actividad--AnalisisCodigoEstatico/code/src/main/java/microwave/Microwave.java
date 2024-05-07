@@ -7,28 +7,19 @@ public class Microwave {
 	List<Preset> presets; 
 	private int powerLevel; 
 
-	private boolean doorOpen, cooking;
-	private ModeController.Mode mode = ModeController.Mode.Setup;
+	private boolean doorOpen;
+	private boolean COOKING;
+	private ModeController.Mode mode = ModeController.Mode.SETUP;
 
 	public Microwave(ModeController mc, DisplayController dc, 
 			List<Preset> presets) {
 		this.mc = mc;
 		this.dc = dc;
-		cooking = false;
+		COOKING = false;
 		doorOpen = true; // start in fail-safe state.
 		this.presets = presets;
 	}
-	
-//	public void zeroPressed() { dc.digitPressed(0); }
-//	public void onePressed() { dc.digitPressed(1); }
-//	public void twoPressed() { dc.digitPressed(2); }
-//	public void threePressed() { dc.digitPressed(3); }
-//	public void fourPressed() { dc.digitPressed(4); }
-//	public void fivePressed() { dc.digitPressed(5); }
-//	public void sixPressed() { dc.digitPressed(6); }
-//	public void sevenPressed() { dc.digitPressed(7); }
-//	public void eightPressed() { dc.digitPressed(8); }
-//	public void ninePressed() { dc.digitPressed(9); }
+
 	public void startPressed() { mc.setStartPressed(true); }
 	public void clearPressed() { mc.setClearPressed(true); 
 								 dc.clearKeyPressed(mc.getMode()); }
@@ -41,8 +32,8 @@ public class Microwave {
 		if (preset < 1 || preset > presets.size()) {
 			throw new IllegalArgumentException("Preset out of range for presetPressed.");
 		}
-		if (mode != ModeController.Mode.Setup) {
-			throw new IllegalArgumentException("Presets can only be used in setup mode");
+		if (mode != ModeController.Mode.SETUP) {
+			throw new IllegalArgumentException("Presets can only be used in SETUP mode");
 		}
 		// Seeded fault here
 		Preset p = presets.get(preset - 1);
@@ -72,10 +63,10 @@ public class Microwave {
 	public void tick() {
 		dc.tick(mode);
 		mode = mc.tick(doorOpen, dc.timeToCook() != 0);
-		cooking = (mode == ModeController.Mode.Cooking);
+		COOKING = (mode == ModeController.Mode.COOKING);
 	}
 	
-	public boolean isCooking() { return cooking; }
+	public boolean isCOOKING() { return COOKING; }
 	
 	// should I make a copy of this?
 	public byte [] digits() { return dc.getDigits(); }

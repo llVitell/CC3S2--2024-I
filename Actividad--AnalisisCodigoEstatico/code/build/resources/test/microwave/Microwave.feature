@@ -41,7 +41,7 @@ interval elapses, a tick() method is called on the microwave, which updates its 
     And Mike presses the 0 key
     When Mike presses the start key
     And 1 seconds elapse
-    Then digits reads 0019
+    Then digits reads 0018
     And mode is cooking
 
 
@@ -49,7 +49,7 @@ interval elapses, a tick() method is called on the microwave, which updates its 
     Given Bob presses the following keys: 1 5 3
     When Bob presses the start key
     And 3 seconds elapse
-    Then digits reads 0150
+    Then digits reads 0146
     And mode is cooking
 
   Scenario: Bob reheats a coffee again for 3 seconds
@@ -59,7 +59,7 @@ interval elapses, a tick() method is called on the microwave, which updates its 
     | 3 | 
     When Bob presses the start key
     And 3 seconds elapse
-    Then digits reads 0150
+    Then digits reads 0146
     And mode is cooking
 
 
@@ -73,21 +73,20 @@ interval elapses, a tick() method is called on the microwave, which updates its 
     And mode is <mode>
 
   Examples:
-    | time | digits     | mode    | 
-    | 5    | 0015       | cooking |
-    | 10   | 0010       | cooking | 
-    | 19   | 0001       | cooking | 
-    | 20   | 0000       | setup   |
-    | 21   | 0000       | setup   |
+    | time | digits | mode    |
+    | 5    | 0008   | cooking |
+    | 10   | 0000   | setup   |
+    | 19   | 0000   | setup       |
+    | 20   | 0000   | setup   |
+    | 21   | 0000   | setup   |
 
 
-  
   Scenario: Trying out a preset.
     This scenario illustrates the nominal use case for presets
     Given Bob presses the 1 scenario key
     When Bob presses the start key
     When 5 seconds elapse
-    Then digits reads 0050
+    Then digits reads 0043
     And mode is cooking
     
   Scenario: Preset out of range
@@ -104,6 +103,6 @@ interval elapses, a tick() method is called on the microwave, which updates its 
     When Bob presses the start key
     When 5 seconds elapse
     And Bob presses the clear key
-    Then digits reads 0050
+    Then digits reads 0043
     And mode is suspended
    

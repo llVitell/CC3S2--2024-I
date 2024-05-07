@@ -105,13 +105,13 @@ public class Stepdefs {
 	@Then("^mode is cooking$")
 	public void mode_is_cooking() throws Throwable {
 		// System.out.println("Mode is cooking");
-		assertEquals(microwave.getMode(), ModeController.Mode.Cooking);
+		assertEquals(microwave.getMode(), ModeController.Mode.COOKING);
 	}
 
 	@Given("^([A-Za-z]+) presses the following keys: (.*)$")
 	public void user_presses_keys(String user, String keysString) {
         // System.out.println(user + " presses the following keys: " + keys.toString());
-		List<Integer> keys = Arrays.stream(keysString.split(""))
+		List<Integer> keys = Arrays.stream(keysString.split(" "))
 				.map(String::trim)
 				.map(Integer::parseInt)
 				.collect(Collectors.toList());
@@ -133,13 +133,13 @@ public class Stepdefs {
     @Then("^mode is setup$")
     public void mode_is_setup() throws Throwable {
     	// System.out.println("Mode is setup");
-    	assertEquals(microwave.getMode(), ModeController.Mode.Setup);
+    	assertEquals(microwave.getMode(), ModeController.Mode.SETUP);
     }
 
     @Then("^mode is suspended$")
     public void mode_is_suspended() throws Throwable {
     	// System.out.println("Mode is suspended");
-    	assertEquals(microwave.getMode(), ModeController.Mode.Suspended);
+    	assertEquals(microwave.getMode(), ModeController.Mode.SUSPENDED);
     }
 
     @Given("^Bob presses the (\\d+) scenario key$")

@@ -37,8 +37,8 @@ public class DisplayController {
 	}
 	
 	public synchronized void clearKeyPressed(ModeController.Mode m) {
-		if (m == ModeController.Mode.Suspended || 
-			m == ModeController.Mode.Setup) {
+		if (m == ModeController.Mode.SUSPENDED || 
+			m == ModeController.Mode.SETUP) {
 			for (int i = 0; i < digits.length; i++) {
 				digits[i] = 0;
 			}
@@ -60,7 +60,7 @@ public class DisplayController {
 	public synchronized void tick(ModeController.Mode mode) {
 	
 		switch (mode) {
-		case Setup: 
+		case SETUP: 
 			byte numberPressed = NO_PRESS;
 			ticks = 0 ;
 			
@@ -78,9 +78,9 @@ public class DisplayController {
 				digits[digits.length - 1] = numberPressed;
 			}
 			break;
-		case Suspended: /* do nothing - wait for user */
+		case SUSPENDED: /* do nothing - wait for user */
 			break;
-		case Cooking:
+		case COOKING:
 			ticks++; 
 			if (secondElapsed() && timeToCook() != 0) {
 				for (int i=digits.length - 1; i >= 0; i--) {
@@ -96,18 +96,6 @@ public class DisplayController {
 			break;
 		}
 		clearDigitPressed();
-/*		int currTime = timeToCook(); 
-		if (mode == ModeController.Mode.Cooking && 
-			currTime != preTime &&
-			currTime != preTime-1) {
-			System.out.println("Currtime = " + currTime + "; preTime = " + preTime);
-	    	System.out.println("Digits is: " + 
-	    			digits[DisplayController.TENS_OF_MINUTES] + " " + 
-	    			digits[DisplayController.MINUTES] + " " + 
-	    			digits[DisplayController.TENS_OF_SECONDS] + " " + 
-	    			digits[DisplayController.SECONDS]);
-		}
-		*/
 	}
 	
 	byte [] getDigits() {

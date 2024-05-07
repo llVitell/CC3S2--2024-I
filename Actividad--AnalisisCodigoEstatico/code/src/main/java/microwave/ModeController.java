@@ -2,12 +2,12 @@ package microwave;
 
 public class ModeController {
 
-	public enum Mode {Cooking, Suspended, Setup};
+	public enum Mode {COOKING, SUSPENDED, SETUP}
 	
 	private boolean startPressed = false;
 	private boolean clearPressed = false;
-	private Mode mode = Mode.Setup;
-	private Mode preMode = Mode.Setup;
+	private Mode mode = Mode.SETUP;
+	private Mode preMode = Mode.SETUP;
 	
 	public synchronized boolean isStartPressed() {
 		return startPressed;
@@ -32,20 +32,20 @@ public class ModeController {
 	synchronized Mode tick(boolean doorOpen, boolean timeRemaining) {
 
 		if (!timeRemaining) {
-			mode = Mode.Setup;
+			mode = Mode.SETUP;
 		}
-		else if (doorOpen && mode == Mode.Cooking) {
-			mode = Mode.Suspended;
+		else if (doorOpen && mode == Mode.COOKING) {
+			mode = Mode.SUSPENDED;
 		} 
 		else if (clearPressed) {
-			if (mode == Mode.Cooking) {
-				mode = Mode.Suspended; 
-			} else if (mode == Mode.Suspended) {
-				mode = Mode.Setup;
+			if (mode == Mode.COOKING) {
+				mode = Mode.SUSPENDED; 
+			} else if (mode == Mode.SUSPENDED) {
+				mode = Mode.SETUP;
 			}
 		} 
 		else if (startPressed && !doorOpen) {
-			mode = Mode.Cooking;
+			mode = Mode.COOKING;
 		}
 		
 		startPressed = false;
@@ -58,9 +58,9 @@ public class ModeController {
 		return mode != preMode;
 	}
 	
-	public boolean inCooking() {
+	public boolean inCOOKING() {
 		return (mode == preMode &&
-				mode == Mode.Cooking);
+				mode == Mode.COOKING);
 	}
 	
 }
