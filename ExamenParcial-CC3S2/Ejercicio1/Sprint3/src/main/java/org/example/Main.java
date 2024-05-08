@@ -13,8 +13,22 @@ public class Main {
             case 1:
                 Question easyQuestion = new Question(
                         "Seleccione la opcion que no es una fruta",
-                        new String[]{"Madrid", "Londres", "Paris"},
+                        new String[]{"Manzana", "Papa", "Platano"},
                         "Papa");
+                quiz.loadQuestion(easyQuestion);
+            case 2:
+                Question midQuestion = new Question(
+                        "Cual es la capital de Argentina",
+                        new String[]{"Buenos Aires","Rosario","Messi"},
+                        "Buenos Aires");
+                quiz.loadQuestion(midQuestion);
+            case 3:
+                Question hardQuestion = new Question(
+                        "Quien es el padre de la evolucion",
+                        new String[]{"Descartes","Aristoteles","Darwin"},
+                        "Darwin ");
+                quiz.loadQuestion(hardQuestion);
+
         }
     }
 }
