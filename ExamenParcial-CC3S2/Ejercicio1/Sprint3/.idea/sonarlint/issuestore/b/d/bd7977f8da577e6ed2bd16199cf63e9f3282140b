@@ -1,0 +1,11 @@
+
+
+java:S1104	"QMake score a static final constant or non-public and provide accessors if needed.(ÒÅœ¹J$e37e282f-c561-444a-ba86-4aa4df722bfe
+H
+java:S1444	"+Make this "public static score" field final(ÒÅœ¹8×§¸Åõ1
+k	java:S106"+Replace this use of System.out by a logger.(‚Å¸şÿÿÿÿJ$2676f888-9e40-4f20-9433-b3df2223125d
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ä·úÎûÿÿÿÿ8»¨¸Åõ1
+k	java:S106"+Replace this use of System.out by a logger.( Øğ¼øÿÿÿÿJ$a8fc5263-f7a6-44da-ad64-6a613631384a
+Y
+java:S1128"<Remove this unused import 'java.util.function.IntPredicate'.(áÕÚ¢8Ñ¨¸Åõ1
