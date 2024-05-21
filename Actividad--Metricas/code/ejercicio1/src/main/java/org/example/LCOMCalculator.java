@@ -3,7 +3,7 @@ package org.example;
 import java.util.*;
 
 public class LCOMCalculator {
-    private static class ClassInfo {
+    public static class ClassInfo {
         List<String> methods = new ArrayList<>();
         Map<String, Set<String>> methodAttributes = new HashMap<>();
         Set<String> attributes = new HashSet<>();
@@ -13,21 +13,9 @@ public class LCOMCalculator {
             attributes.addAll(attrs);
         }
     }
-    public static void main(String[] args) {
-        ClassInfo classInfo = new ClassInfo();
-        // Simulación de entrada de métodos y sus accesos a atributos
-        classInfo.addMethod("method1", new HashSet<>(Arrays.asList("attr1", "attr2")));
-        classInfo.addMethod("method2", new HashSet<>(Arrays.asList("attr2")));
-        classInfo.addMethod("method3", new HashSet<>(Arrays.asList("attr3")));
 
-        classInfo.addMethod("method4", new HashSet<>(Arrays.asList("attr1")));
-        classInfo.addMethod("method5", new HashSet<>(Arrays.asList("attr4", "attr5")));
-        classInfo.addMethod("method6", new HashSet<>(Arrays.asList("attr5", "attr6")));
-        classInfo.addMethod("method7", new HashSet<>(Arrays.asList("attr1", "attr7")));
-        classInfo.addMethod("method8", new HashSet<>(Arrays.asList("attr2", "attr8")));
-
+    public static void calcularLCOM (List<String> methods, ClassInfo classInfo){
         int p = 0, q = 0;
-        List<String> methods = classInfo.methods;
         for (int i = 0; i < methods.size(); i++) {
             for (int j = i + 1; j < methods.size(); j++) {
                 String method1 = methods.get(i);
@@ -46,5 +34,23 @@ public class LCOMCalculator {
         }
         int lcom = p - q;
         System.out.println("LCOM = " + lcom);
+    }
+
+    public static void main(String[] args) {
+        ClassInfo classInfo = new ClassInfo();
+        // Simulación de entrada de métodos y sus accesos a atributos
+        classInfo.addMethod("method1", new HashSet<>(Arrays.asList("attr1", "attr2")));
+        classInfo.addMethod("method2", new HashSet<>(Arrays.asList("attr2")));
+        classInfo.addMethod("method3", new HashSet<>(Arrays.asList("attr3")));
+
+        classInfo.addMethod("method4", new HashSet<>(Arrays.asList("attr1")));
+        classInfo.addMethod("method5", new HashSet<>(Arrays.asList("attr4", "attr5")));
+        classInfo.addMethod("method6", new HashSet<>(Arrays.asList("attr5", "attr6")));
+        classInfo.addMethod("method7", new HashSet<>(Arrays.asList("attr1", "attr7")));
+        classInfo.addMethod("method8", new HashSet<>(Arrays.asList("attr2", "attr8")));
+
+        List<String> methods = classInfo.methods;
+        calcularLCOM(methods, classInfo);
+
     }
 }

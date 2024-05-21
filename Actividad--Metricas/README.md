@@ -2,40 +2,90 @@
 
 # Ejercicio: Analiza el Acoplamiento y realiza el cálculo del factor de acoplamiento (CF)
 
-## Clase UsuarioModulo
+## Acoplamiento eferente
 
-### Acoplamiento eferente
-
-Clase UsuarioModulo
+Clase UsuarioModulo (2)
 
 - `Usuario` : instancia del objeto Usuario
 - `AgregarUsuario` : metodo que utiliza la clase Usuario
 
-Clase Grupo Contacto Modulo
+Clase Grupo Contacto Modulo (2)
 
 - `Usuario` : Utiliza una lista de objetos de la clase Usuario
 - `agregarUsuario` : metodo que tiene como parametro la clase Usuario
 
-Clase Contacto Operaciones Modulo
+Clase Contacto Operaciones Modulo (2)
 
 - `enviarMensaje`: usa un objeto de la clase Usuario como parametro
 
-### Acoplamiento aferente
+Clase Sistema Contactos (3)
 
-Modulos que utilizan un modulo propio de la clase UsuarioModulo:
+- `usuarioModulo` : instancia de la clase Usuario Modulo
+- `usuario` : instancia de la clase Usuario
+- `operacionesModulo` : instancia de la clase Contacto Operaciones Modulo  
 
+## Acoplamiento aferente
 
+Clase UsuarioModulo ()
 
-# Ejercicio: 
+- `usuarioModulo` : instancia usada en la clase Sistema Contactos
 
-Para el siguiente diagrama de clases, calcula el valor de Inestabilidad para las clases:
+Clase Grupo Contacto Modulo
 
-- Stop
-- PassengerUnloader
+- `agregarUsuarioAGrupo` :  metodo usado en la clase UsuarioModulo
+- `crearGrupo` : metodo utilizado en la clase Sistema Contactos
 
-Usa hasta 3 cifras significativas
+Clase Contacto Operaciones Modulo
 
-![](image.png)
+- `operacionesModulo`: instancia utilizada en la clase Sistema Contactos
+
+Clase Usuario
+
+- Hay 6 modulos que utilizan instancias del tipo Usuario
+
+## Factor de Acoplamiento
+
+![](images/image-1.png)
+
+`CF = e / (a*(n-1)) `
+
+Donde
+
+- Numero total de conexiones (e) = 8
+- Numero de modulos en el sistema (a) = 5
+- Numero total de modulos = 5
+
+Entonces `CF = 0.4`
+
+# Ejercicio: LCOMCalculator
+
+## Extender LCOMCalculator para incluir más métodos y atributos
+
+Si en un inicio ejecutamos el programa tenemos como resultado un LCOM = 1 por que el numero de pares que no compartes atributos (2) menos el numero de pares que si comparten atributos (1) es igual a 1
+
+![](images/image-2.png)
+
+Para ver si como varian los valores de p y q agregamos mas metodos con atributos distintos
+
+![](images/image-3.png)
+
+Ejecucion:
+
+![](images/image-4.png)
+
+## Refactorizar LCOMCalculator para mejorar la legibilidad y eficiencia
+
+Separamos la logica del calculo del LCOM creando el metodo calcularLCOM
+
+![](images/image-5.png)
+
+## Implementar unidades de pruebas para LCOMCalculator
+
+![](images/image-6.png)
+
+# Ejercicio: Para el siguiente diagrama de clases, calcula el valor de Inestabilidad para la clase Stop y PassengerUnloader: 
+
+![](images/image.png)
 
 
 ## Clase Stop
