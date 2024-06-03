@@ -5,7 +5,7 @@
 
 Crear una interfaz NumerosAleatorios que defina un método para obtener números aleatorios dentro de un rango específico
 
-![](image.png)
+![](images/image.png)
 
 No se define la logica del metodo por que eso se verá en otra clase en pasos más adelante
 
@@ -13,13 +13,13 @@ No se define la logica del metodo por que eso se verá en otra clase en pasos m�
 
 Modificar la clase LanzamientoDados para que utilice la interfaz NumerosAleatorios, inyectando la dependencia a través del constructor
 
-![](image-1.png)
+![](images/image-1.png)
 
 ### Paso 3
 
 Desarrollar un stub de NumerosAleatorios para usar en pruebas unitarias, permitiendo controlar los resultados de los lanzamientos
 
-![](image-2.png)
+![](images/image-2.png)
 
 Creamos un stub que sobrescribe el metodo obtenerNumeroAleatorio para controlar el resultado que queremos obtener y asi poder escribir las pruebas
 
@@ -27,7 +27,7 @@ Creamos un stub que sobrescribe el metodo obtenerNumeroAleatorio para controlar 
 
 Escribir pruebas unitarias para LanzamientoDados utilizando el stub para asegurar que la lógica del lanzamiento funciona como se espera bajo condiciones controladas
 
-![](image-3.png)
+![](images/image-3.png)
 
 Nuestro stub retorna un numero fijo asi que para testear este usamos el metodo isEqualTo
 
@@ -35,17 +35,17 @@ Nuestro stub retorna un numero fijo asi que para testear este usamos el metodo i
 
 Implementar una clase NumerosGeneradosAleatoriamente que utilice un generador de números aleatorios real y que cumpla con la interfaz NumerosAleatorios.
 
-![](image-4.png)
+![](images/image-4.png)
 
 ### Paso 6
 
 Integrar y probar la clase LanzamientoDados en una aplicación de producción, inyectando la implementación real de NumerosAleatorios
 
-![](image-5.png)
+![](images/image-5.png)
 
 Primero agregamos el metodo lanzarDados a la clase LanzamientoDados
 
-![](image-6.png)
+![](images/image-6.png)
 
 Luego creamos los objetos necesarios asi como la inyeccion de dependencias (NumerosGeneradosAleatoriamente) y llamar al metodo real lanzarDados
 
@@ -55,7 +55,7 @@ Luego creamos los objetos necesarios asi como la inyeccion de dependencias (Nume
 
 Definir una interfaz MailServer que abstraiga el envío de correos electrónicos
 
-![](image-7.png)
+![](images/image-7.png)
 
 ### Paso 2
 
