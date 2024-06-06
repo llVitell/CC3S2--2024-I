@@ -12,12 +12,7 @@ public class HelloMockito {
     }
     public String greet(int id, String sourceLang, String targetLang){
         Optional<Person> person = personRepository.findById(id);
-        if(person.isPresent()){
-            String name = person.map(Person::getFirst).orElse("World");
-            return translationService.translate(String.format(greeting, name),sourceLang,targetLang);
-        }
-        else {
-            throw new IllegalArgumentException("No se encontro a la persona");
-        }
+        String name = person.map(Person::getFirst).orElse("World");
+        return translationService.translate(String.format(greeting, name),sourceLang,targetLang);
     }
 }

@@ -2,7 +2,7 @@
 
 ## Clase WordSelector
 
-Esta clase se encarga de seleccionar una palabra de nuestro repositorio para tomarla como referencia en nuestro juego. Para su implementación usare inyeccion de dependencias, es decir creare una interfaz con los metodos respectivos. Luego nuestra clase WordSelector va a implementar esta interfaz y sobreescribira los metodos para que funcionen correctamente
+Esta clase se encarga de seleccionar una palabra de nuestro repositorio para tomarla como referencia en nuestro juego. Para su implementación usare inyeccion de dependencias, es decir una interfaz con los metodos respectivos. Luego nuestra clase WordSelector va a implementar esta interfaz y sobreescribira los metodos para que funcionen correctamente
 
 ![](images/screenshot_51.png)
 
@@ -12,7 +12,7 @@ Esta clase se encarga de seleccionar una palabra de nuestro repositorio para tom
 
 ## Clase HintGenerator
 
-Clase encargada de generar la pista de nuestro juego, esta nos dira por ejemplo cuantas letras tiene la palabra seleccionada. Al igual que con la clase WordSelector, también usaremos inyeccion de dependencias mediante una interfaz.
+Clase encargada de generar la pista de nuestro juego, esta nos dira por ejemplo cuantas letras tiene la palabra seleccionada. Al igual que con la clase WordSelector
 
 ![](images/screenshot_52.png)
 
@@ -60,7 +60,7 @@ En la imagen previa se observa que creamos un objeto del tipo FeedBackGenerator 
 Las pruebas fallan como se espera
 ![](images/screenshot_61.png)
 
-Agregamos la lógica del feedBackGenerator utilizando inyeccion de dependencias para hacer pasar las pruebas a verde
+Agregamos la lógica del feedBackGenerator para hacer pasar las pruebas a verde
 
 ![](images/screenshot_58.png)
 
@@ -68,53 +68,109 @@ Y las pruebas pasan satisfactoriamente
 
 ![](images/screenshot_62.png)
 
-## Metricas y Cohesion
+## LCOM4
 
 **Clase Game**
 
- Acoplamiento eferente (3)
- - Utiliza un objeto de la clase WordSelecter
- - Utiliza un objeto de la clase HintGenerator
- - Utiliza un objeto de la clase FeedBackGenerator
+Metodos identificados en la clase Game:
 
- 
-Acoplamiento aferente (1)
- - Es utilizado por la clase FeedBackGenerator
+- `start`: Utiliza wordSelector y hintGenerator
+- `main`: Utiliza instancias de la clase Game, WordSelector y HintGenerator
 
+Numero de componentes conectados = LCOM4 = 2
 
-**Clase HintGenerator**
+> Entonces la clase Game necesita refactorizacion
 
-Acoplamiento eferente (1)
-- Utiliza la interfaz IHintGenerator
-Acoplamiento aferente (1)
-- Es utilizado por la clase Game
+Tanto la clase WordSelector, HintGenerator y FeedBackGenerator solo tienen 1 componente asolado entonces no es necesario refactorizar
 
-**Clase WordSelecter**
+## CAMC
 
-Acoplamiento eferente(1)
-- Utiliza la interfaz IWordSelecter
-Acoplamiento aferente (1)
-- Es utilizado por la clase Game
+**Clase Game**
 
-**Clase FeedBackGenerator**
-Acoplamiento eferente (3)
-- Utiliza instancias de las clases WordSelecter, HintGenerator, game
-Acoplamiento aferente (1)
-- Es utilizado por la clase Game
+- `Game`: Tiene 3 parametros unicos (IWordSelector, IHintGenerator, int)
+- `start`: No tiene parametros
+- `main`: Tiene 1 parametro unico (String[])
 
-Con estos valores es que se puede hacer un diagrama UML y ver claramente que hay un LCOM alto lo cual quiere decir baja cohesion.
+Sumas de tipos de parametros unicos: 3 + 0 + 1 = 4
+
+Numero total de metodos: 3
+
+Numero maximo de parametros por metodo: 3
+
+CAMC = 4 / 3*3 = 0.44
+
+> CAMC cercano a 0 significa baja cohesion por ende necesita refactorizacion
+
+Al igual que con el LCOM4 las clases WordSelector, HintGenerator y FeedBackGenerator solo tienen 1 metodo con a lo mucho 1 parametro entonces su CAMC = 1 por ende no necesitan refactorizacion
 
 ## Sonar
 
-Volvemos a ejectuar sonar y efectivamente es necesario refactorizar el codigo
+Volvemos a ejectuar sonar y detecta olores de codigo que se van a solucionar en el siguiente punto junto a las refactorizaciones basadas en las metricas
 
 ![](images/screenshot_63.png)
 
 ## Refactorización
 
+**Clase Game**
+
+- Separamos el metodo main en una nueva clase asi como tambien solucionamos los code smells como remover la variable `intentos` que estaba en la linea 6 y que no se utiliza en la clase Game reduciendo el numero de parametros en nuestra clase
+
+![](images/Screenshot%202024-06-05%20212207.png)
+
 - Clase FeedBackgenerator: Cambiamos el parametro por un string guess en vez de un objeto de la clase Game
 
-- Clase Game: Agregamos un parametro intentos para limitar el numero de veces que un usuario puede adivinar una letra
+![](images/Screenshot%202024-06-05%20213224.png)
+
+# Sprint 3: Refinamiento y finalizacion
+
+## Clase Game
+
+En este print vamos a concluir la logica de nuestro juego utilizando TDD
+
+### Prueba para verificar que se decremente el numero de intentos en cada adivinanza
+
+![](images/Screenshot%202024-06-05%20214657.png)
+
+Las pruebas fallan asi que implementamos la logica necesaria en nuestra clase Game
+
+- Se crea el metodo guessLetter
+- Getters y Setters para los intentos
+
+![](images/Screenshot%202024-06-05%20215443.png)
+
+### Prueba para verificar que se adivinen todas las letras
+
+![](images/Screenshot%202024-06-05%20230822.png)
+
+Logica para la prueba
+
+- Se crea la varible wordSelected
+- Se crea una Lista para almacenar las letras adivinadas
+- Se crea el metodo isWon con logica para verificar que se hayan adivinado cada una de las letras de la palabra seleccionada
+
+![](images/Screenshot%202024-06-05%20231038.png)
+
+### Pruebas para verificar que el usuario pueda visualizar si gana o no
+
+![](images/Screenshot%202024-06-05%20232551.png)
+
+Agregamos la logica
+
+- Se agrega el metodo checkGameStatus que retorna un mensaje ya sea de victoria o derrota
+
+![](images/Screenshot%202024-06-05%20232807.png)
+
+Corremos todas las pruebas implementadas y se observa que todas pasan
+
+![](images/Screenshot%202024-06-05%20234322.png)
+
+## Analisis y Refactorizacion
+
+## Resultados
+
+
+
+
 
 
 

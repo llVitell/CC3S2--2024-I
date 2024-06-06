@@ -1,16 +1,15 @@
 package org.example;
 
-import java.util.Scanner;
-
 public class Game {
-    private IWordSelector wordSelector;
-    private IHintGenerator hintGenerator;
-    private int intentos;
+    private final IWordSelector wordSelector;
+    private final IHintGenerator hintGenerator;
+    private final IFeedBackGenerator feedBackGenerator;
+    private int intents;
 
-    public Game(IWordSelector wordSelector, IHintGenerator hintGenerator, int intentos){
+    public Game(IWordSelector wordSelector, IHintGenerator hintGenerator, IFeedBackGenerator feedBackGenerator){
         this.wordSelector = wordSelector;
         this.hintGenerator = hintGenerator;
-        this.intentos = intentos;
+        this.feedBackGenerator = feedBackGenerator;
     }
     public void start(){
         String word = wordSelector.selectWord();
@@ -18,20 +17,16 @@ public class Game {
         System.out.println("Pista: " + hint);
     }
 
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        IWordSelector wordSelector = new WordSelector();
-        IHintGenerator hintGenerator = new HintGenerator();
-        IFeedBackGenerator feedBackGenerator = new FeedBackGenerator();
-        int intentos = 10;
-        Game game = new Game(wordSelector,hintGenerator, intentos);
-        game.start();
-        System.out.println("Adivina una letra: ");
-        do {
-            String guess = scanner.nextLine();
-            intentos--;
-            System.out.println("Feedback: " + feedBackGenerator.generateFeedback(guess));
-        }while (intentos >= 0);
+    public void guessLetter(String letter){
+        setIntents(intents-1);
+        System.out.println("Feedback: " + feedBackGenerator.generateFeedback(letter));
+    }
 
+    public void setIntents(int intents){
+        this.intents = intents;
+    }
+
+    public int getIntents(){
+        return intents;
     }
 }
