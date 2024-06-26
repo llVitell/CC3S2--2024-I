@@ -25,7 +25,7 @@ public class Tower{
         if(enemies.isEmpty()){
             throw new IllegalArgumentException("No puede ser una lista vacia");
         }
-        int previousHealth = 50;
+
         for(Enemy enemy: enemies){
             double distance = Math.sqrt(Math.pow(this.x - enemy.getX(),2)+Math.pow(this.y-enemy.getY(),2));
             if(distance <= this.range){
@@ -36,9 +36,10 @@ public class Tower{
         for(Enemy enemy: enemies){
             double distance = Math.sqrt(Math.pow(this.x - enemy.getX(),2)+Math.pow(this.y-enemy.getY(),2));
             if(distance <= this.range){
-                enemy.setHealth(enemy.getHealth()-this.damage);
-                if(previousHealth == enemy.getHealth()){
-                    throw new IllegalArgumentException("No se atacó");
+                int previousHealth = 100;
+                int expectedHealth = previousHealth - this.damage;
+                if(enemy.getHealth() != expectedHealth){
+                    throw new IllegalArgumentException("No se ataca");
                 }
             }
         }

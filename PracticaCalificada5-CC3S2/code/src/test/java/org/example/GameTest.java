@@ -51,10 +51,10 @@ class GameTest {
     void testAttack_EnemyInRange() {
         List<Enemy> enemies = List.of(new BasicEnemy().createEnemy());
         enemies.get(0).setPosition(2, 2);
-        Tower tower = new SniperTower().createTower();
+        Tower tower = new CannonTower().createTower();
         tower.setPosition(2, 1);
         tower.attack(enemies);
-        assertEquals(30, enemies.get(0).getHealth());
+        assertEquals(50, enemies.get(0).getHealth());
     }
     @Test
     void testAttack_EnemyOutOfRange() {

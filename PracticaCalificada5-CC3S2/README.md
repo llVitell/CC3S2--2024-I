@@ -93,6 +93,12 @@ Verificamos que se hayan iniciado los servicios tanto en intellij como en Docker
 
 ## Ejercicio 3: Orquestacion con Kubernetes
 
+### Teoria
+
+- Kubernetes es una plataforma de orquestación de contenedores que automatiza la implementación y gestión de aplicaciones en contenedores. Sus componentes principales incluyen el API Server, que expone la API y maneja las solicitudes; etcd, que almacena el estado del clúster; el Scheduler, que asigna pods a nodos; y Kubelet, que ejecuta y gestiona contenedores en cada nodo
+
+### Practico
+
 Para poder desplegar nuestros archivos `game-development.yaml` y `game-service.yaml` debemos tener un cluster, para esto hay varias opciones en este caso usare docker desktop.
 
 En docker desktop basta con habilitar kubernetes en la seccion de configuracion
@@ -126,8 +132,7 @@ Estas pruebas verifican que las oleadas hayan sido iniciadas cuando creamos un g
 
 ### Teoria
 
-Las pruebas de mutacion nos sirven para resaltar y evitar comportamientos inesperados, si al momento de realizar una mutacion en un test y correrla falla quiere decir que la prueba esta bien escrita (mutante KILLED) , caso contrario la prueba esta mal escrita (mutante SURVIVED)
-
+Las pruebas de mutacion nos sirven para resaltar y evitar comportamientos inesperados, si al momento de realizar una mutacion en un test y correrla falla quiere decir que la prueba esta bien escrita (mutante KILLED) , caso contrario la prueba esta mal escrita (mutante SURVIVED).
 
 ### Practico
 
@@ -153,7 +158,11 @@ El diseño por contrato trata a los componentes de un software como participante
 
 Agregamos las precondiciones (vida previa del enemigo antes de ser atacado) y las post condiciones (recorre todos los enemigos para verificar que hayan sido atacados, es decir que su vida inicial sea distinta a la actual)
 
-![](images/image-22.png)
+![](images/1.png)
+
+Escribimos y corremos las pruebas unitarias donde se crea una lista de enemigos, establecemos la posicion del enemigo asi como tambien la posicion de la torre, luego llamamos al metodo attack y verificamos que se haya atacado
+
+![](images/2.png)
 
 
 

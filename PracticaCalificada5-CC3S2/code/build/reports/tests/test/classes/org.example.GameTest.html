@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">11</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">11</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.965s</div>
+<div class="counter">0.836s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,1633 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testAttack_EnemyInRange()"></a>
+<h3 class="failures">testAttack_EnemyInRange()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testAttack_EnemyOutOfRange()"></a>
+<h3 class="failures">testAttack_EnemyOutOfRange()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testIsValidPosition_InvalidOccupied()"></a>
+<h3 class="failures">testIsValidPosition_InvalidOccupied()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testIsValidPosition_InvalidOutOfBounds()"></a>
+<h3 class="failures">testIsValidPosition_InvalidOutOfBounds()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testIsValidPosition_Valid()"></a>
+<h3 class="failures">testIsValidPosition_Valid()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testPlaceTower_InvalidPosition()"></a>
+<h3 class="failures">testPlaceTower_InvalidPosition()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testPlaceTower_ValidPosition()"></a>
+<h3 class="failures">testPlaceTower_ValidPosition()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testShowMapShouldShowAMap()"></a>
+<h3 class="failures">testShowMapShouldShowAMap()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testStartWave_NoEnemies()"></a>
+<h3 class="failures">testStartWave_NoEnemies()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testStartWave_WithEnemies()"></a>
+<h3 class="failures">testStartWave_WithEnemies()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testTowerDefenseGameDependenciesShouldWork()"></a>
+<h3 class="failures">testTowerDefenseGameDependenciesShouldWork()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy16.isTypeMockable(Unknown Source)
+	at org.mockito.internal.util.MockUtil.typeMockabilityOf(MockUtil.java:33)
+	at org.mockito.internal.util.MockCreationValidator.validateType(MockCreationValidator.java:22)
+	at org.mockito.internal.creation.MockSettingsImpl.validatedSettings(MockSettingsImpl.java:250)
+	at org.mockito.internal.creation.MockSettingsImpl.build(MockSettingsImpl.java:232)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:83)
+	at org.mockito.Mockito.mock(Mockito.java:1964)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:66)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:27)
+	at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:24)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:45)
+	at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:73)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:74)
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:48)
+	at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:82)
+	at org.mockito.internal.framework.DefaultMockitoSession.&lt;init&gt;(DefaultMockitoSession.java:43)
+	at org.mockito.internal.session.DefaultMockitoSessionBuilder.startMocking(DefaultMockitoSessionBuilder.java:83)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:163)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:199)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:199)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:162)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:129)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	Suppressed: java.lang.NullPointerException: Cannot invoke &quot;java.util.Set.forEach(java.util.function.Consumer)&quot; because the return value of &quot;org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)&quot; is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:184)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+		... 63 more
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@6a10b263
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:152)
+	... 69 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 74 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 17.0.10+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.10+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 80 more
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:698)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:629)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:609)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:561)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:538)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:117)
+	... 81 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,22 +1698,61 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testShowMapShouldShowAMap()</td>
-<td class="success">5.965s</td>
-<td class="success">passed</td>
+<td class="failures">testAttack_EnemyInRange()</td>
+<td class="failures">0.002s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testAttack_EnemyOutOfRange()</td>
+<td class="failures">0.002s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testIsValidPosition_InvalidOccupied()</td>
+<td class="failures">0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testIsValidPosition_InvalidOutOfBounds()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testIsValidPosition_Valid()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testPlaceTower_InvalidPosition()</td>
+<td class="failures">0s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testPlaceTower_ValidPosition()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testShowMapShouldShowAMap()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testStartWave_NoEnemies()</td>
+<td class="failures">0.002s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testStartWave_WithEnemies()</td>
+<td class="failures">0.823s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testTowerDefenseGameDependenciesShouldWork()</td>
+<td class="failures">0.003s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>' ' ' ' 'C' ' ' ' ' 
-' ' 'C' ' ' ' ' ' ' 
-'C' ' ' ' ' 'C' 'B' 
-' ' ' ' 'C' ' ' ' ' 
-' ' ' ' ' ' ' ' ' ' 
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -103,7 +1762,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 26 jun. 2024 08:14:55</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 26 jun. 2024 17:52:22</p>
 </div>
 </div>
 </body>
