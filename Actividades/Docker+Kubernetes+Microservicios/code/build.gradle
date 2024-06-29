@@ -1,12 +1,10 @@
 plugins {
     id 'java'
-    id "org.sonarqube" version "4.4.1.3373"
     id 'info.solidsoft.pitest' version '1.15.0'
-    id 'jacoco'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'org.example'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -30,28 +28,4 @@ pitest{
     targetClasses = ['org.example.*']
     outputFormats = ['HTML']
     timestampedReports = false
-}
-
-
-jacoco {
-    toolVersion = '0.8.11'
-}
-
-jacocoTestReport{
-    dependsOn test
-
-    reports{
-        xml.required.set(true)
-        html.required.set(true)
-    }
-}
-
-check.dependsOn jacocoTestCoverageVerification
-
-sonar {
-    properties {
-        property "sonar.organization", "test-software"
-        property "sonar.token", "4f32aebfc46cb5cc4f59efbf4f02e1433f70101e"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
 }

@@ -1,7 +1,0 @@
-
-]
-java:S1854";Remove this useless assignment to local variable "mapSize".(ÏîöÓùÿÿÿÿ8­ÍÔå„2
-r	java:S106"+Replace this use of System.out by a logger.(Ôö®‘øÿÿÿÿ8é«éá„2J$cb38e43a-5d10-403d-aca5-1b053dce96c8
-G	java:S106"+Replace this use of System.out by a logger.(ªŠ§‰8±ÍÔå„2
-N
-java:S1481",Remove this unused "mapSize" local variable.(ÏîöÓùÿÿÿÿ8²ÍÔå„2
