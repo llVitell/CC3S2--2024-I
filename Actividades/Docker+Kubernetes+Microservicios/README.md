@@ -4,41 +4,41 @@ Para esta actividad vamos a dividir el proyecto en diferentes componentes (servi
 
 Esta es la estructura del proyecto donde cada servicio tiene su propio docker file
 
-![](image.png)
+![](images/image.png)
 
 ## Containers + Images
 
 Corremos todos los dockerfiles para tener los contenedores con sus imagenes
 
-![](image-1.png)
+![](images/image-1.png)
 
 Con `docker start` ejecutamos los contenedor para luego agregarlos a la red `game-network`
 
-![](image-2.png)
+![](images/image-2.png)
 
 Una vez agregados, nuestro dashboard se ve asi
 
-![](image-3.png)
+![](images/image-3.png)
 
 Por ultimo vinculamos nuestros contenedores con el volume con `docker run -v path` donde -v indica que vamos a vincular un volumen y el path es el directorio donde va a estar ubicado y asi se veria nuestro volume
 
-![](image-4.png)
+![](images/image-4.png)
 
 ## Docker Compose
 
 Una vez hecho todo esto podemos pasar a crear nuestro servicio con `docker compose`, este archivo lo creamos en org.example para poder acceder a las rutas de los dockerfile con build de manera sencilla. Asi se veria 
 
-![](image-5.png)
+![](images/image-5.png)
 
 Ahora si ejecutamos `docker-compose up` y una vez finalizado podemos ver en docker desktop que se ha creado el servicio
 
-![](image-6.png)
+![](images/image-6.png)
 
 ## Deployment + Services Kubernetes
 
 Creamos todos los archivos.yaml (despliegue y servicios) necesarios para cada uno de los microservicios (game, map, player, tower, wave)
 
-![](image-7.png)
+![](images/image-7.png)
 
 > [!IMPORTANT] 
 > Antes de ejecutar `kubectl apply -f file.yaml` se encontro un problema con 
@@ -46,7 +46,7 @@ docker desktop, por alguna razon no detectaba las imagenes locales y para soluci
 
 Corremos los despligues y servicios
 
-![](image-8.png)
+![](images/image-8.png)
 
 ## Mockito
 
@@ -61,7 +61,7 @@ testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
 
 Escribimos unas pruebas para el metodo placeTower utilizando mocks de TowerService asi como de GameService
 
-![](image-9.png)
+![](images/image-9.png)
 
 ## Pitest
 
@@ -83,7 +83,7 @@ pitest{
 
 Una vez hecho esto ya podemos correr `./gradlew pitest` y ver nuestro reporte con la cobertura de codigo y los mutantes
 
-![](image-10.png)
+![](images/image-10.png)
 
 Esto nos indica que no se han testeado todas las funciones existentes, y que hay varios mutantes vivos. Todo esto se debe a que solo hemmos testeado un metodo
 
