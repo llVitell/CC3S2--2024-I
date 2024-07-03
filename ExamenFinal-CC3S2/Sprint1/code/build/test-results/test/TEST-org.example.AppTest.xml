@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.AppTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-07-03T15:09:21" hostname="DESKTOP-FA86KVN" time="5.958">
+  <properties/>
+  <testcase name="rainAlertsAndEventsShouldWork()" classname="org.example.AppTest" time="5.605"/>
+  <testcase name="rainExtremeWeatherConditions()" classname="org.example.AppTest" time="0.031"/>
+  <testcase name="rainAlertsShouldWork()" classname="org.example.AppTest" time="0.025"/>
+  <testcase name="airAlertsShouldWork()" classname="org.example.AppTest" time="0.024"/>
+  <testcase name="temperatureAlertsShouldWork()" classname="org.example.AppTest" time="0.023"/>
+  <testcase name="rainEventsShouldWork()" classname="org.example.AppTest" time="0.009"/>
+  <testcase name="airEventsShouldWork()" classname="org.example.AppTest" time="0.043"/>
+  <testcase name="temperatureEventsShouldWork()" classname="org.example.AppTest" time="0.007"/>
+  <testcase name="airAlertsAndEventsShouldWork()" classname="org.example.AppTest" time="0.019"/>
+  <testcase name="templertsAndEventsShouldWork()" classname="org.example.AppTest" time="0.019"/>
+  <testcase name="airExtremeWeatherConditions()" classname="org.example.AppTest" time="0.01"/>
+  <testcase name="tempExtremeWeatherConditions()" classname="org.example.AppTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
